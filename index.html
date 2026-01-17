@@ -1,20 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khafid | Portfolio</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
 
-    </header>
-    <main>
+<body class="bg-gray-100 text-gray-800">
+    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
 
-    </main>
-    <footer>
+            <!-- LEFT: PHOTO + BRAND -->
+            <div class="flex items-center gap-3">
+                <img src="assets/profile.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover border" />
+                <h1 class="font-bold text-xl">MyWebsite</h1>
+            </div>
 
+            <!-- RIGHT: MENU -->
+            <ul class="flex gap-6">
+                <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+                <li><a href="#profile" class="hover:text-blue-600">Our Profile</a></li>
+                <li><a href="#portfolio" class="hover:text-blue-600">Portfolio</a></li>
+                <li><a href="#message" class="hover:text-blue-600">Message Us</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home" class="pt-24 min-h-screen flex items-center justify-center bg-white">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold mb-2">
+                Hi <span id="username" class="text-orange-600">Guest</span>, Welcome To Website
+            </h2>
+            <p class="text-gray-500">This is my personal portfolio website</p>
+        </div>
+    </section>
+
+    <!-- Headquarter -->
+    <section class="py-16 bg-gray-100">
+        <h3 class="text-center text-2xl font-semibold mb-8">Our Headquarter</h3>
+        <div class="flex flex-col md:flex-row justify-center gap-10">
+            <div class="text-center">
+                <div class="w-32 h-32 rounded-full bg-white shadow mx-auto"></div>
+                <p class="mt-2">Jakarta</p>
+            </div>
+            <div class="text-center">
+                <div class="w-32 h-32 rounded-full bg-white shadow mx-auto"></div>
+                <p class="mt-2">Bandung</p>
+            </div>
+            <div class="text-center">
+                <div class="w-32 h-32 rounded-full bg-white shadow mx-auto"></div>
+                <p class="mt-2">Surabaya</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile -->
+    <section id="profile" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Photo Banner -->
+            <div
+                class="h-56 bg-gradient-to-r from-orange-500 to-indigo-600 rounded-xl mb-10 flex items-center justify-center text-white text-3xl font-bold">
+                About Me
+            </div>
+
+            <!-- Portfolio -->
+            <section id="portfolio" class="py-20 bg-gray-100">
+                <div class="max-w-6xl mx-auto px-4">
+                    <h3 class="text-2xl font-semibold text-center mb-10">My Portfolio</h3>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white p-4 rounded shadow">
+                            <h4 class="font-semibold mb-2">Web Profile</h4>
+                            <p class="text-sm text-gray-600">
+                                Personal portfolio website using HTML, Tailwind CSS, and JavaScript.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded shadow">
+                            <h4 class="font-semibold mb-2">Academic Project</h4>
+                            <p class="text-sm text-gray-600">
+                                Campus projects such as system design and data processing.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded shadow">
+                            <h4 class="font-semibold mb-2">UI/UX Design</h4>
+                            <p class="text-sm text-gray-600">
+                                Simple UI mockups and design explorations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- About -->
+            <div class="mb-10">
+                <h3 class="text-2xl font-semibold mb-3">About the Company</h3>
+                <p class="text-gray-600">
+                    I am Abdul Khafid, an Informatics Engineering student who focuses on web development,
+                    UI/UX, and system design. This portfolio represents my journey and projects in technology.
+                </p>
+            </div>
+
+            <!-- Vision & Mission -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-2">Vision</h4>
+                    <p class="text-gray-600">
+                        To become a professional software engineer with global impact.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-2">Mission</h4>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Build clean and scalable applications</li>
+                        <li>Continuously learn modern technologies</li>
+                        <li>Create solutions that matter</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Us -->
+    <section id="message" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
+
+            <!-- Form -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Message Us</h3>
+                <form id="contactForm" class="space-y-4">
+                    <input type="text" id="name" placeholder="Name" class="w-full p-2 border rounded" />
+                    <input type="date" id="date" class="w-full p-2 border rounded" />
+                    <div class="flex gap-4">
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+                    <textarea id="messageText" placeholder="Message" class="w-full p-2 border rounded"></textarea>
+                    <button type="submit" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                        Submit
+                    </button>
+                </form>
+            </div>
+
+            <!-- Output -->
+            <div class="bg-white p-4 rounded shadow">
+                <h4 class="font-semibold mb-2">Submitted Data</h4>
+                <p id="output">No data yet.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="text-center py-4 bg-white text-sm">
+        Created by Khafid
     </footer>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
